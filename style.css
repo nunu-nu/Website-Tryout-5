@@ -1,0 +1,359 @@
+html, body {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+:root {
+    --maxText: calc(calc(90vw - 5px)/14);
+    --medText: calc(calc(90vw - 5px)/22);
+    --minText: calc(calc(90vw - 5px)/26);
+    --minTextAlt: calc(calc(90vw - 5px)/12);
+    --minTextInterval: calc(calc(90vw - 10px) / 13);
+  }
+  
+
+#explanation {
+    width: auto;
+    transition-duration: 1s;
+    transition-property: opacity, padding, bottom;
+    position: fixed;
+    padding: 10px 5px 14px 5px;
+    right: 5vw;
+    bottom: 20px;
+    background-color: white;
+}
+
+body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 24px;
+    }
+
+h2 {
+    margin-top:0;
+    margin-bottom:0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* * {
+    border: red 1px dotted;
+} */
+
+hr {
+    border: 1px #000000;
+    border-style: solid;
+    width:calc(8vw + 400px);
+    margin-left: 0px;
+}
+
+@font-face {
+    font-family: "Kaba";
+    src: url('KabaVariations-Individual.otf') format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Kaba-2";
+    src: url('KabaVariations-Individual-mirror.otf') format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Kaba-3";
+    src: url('KabaVariations-Individual-lake.otf') format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Kaba-4";
+    src: url('KabaVariations-Individual-mirror-lake.otf') format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Kaba-5";
+    src: url('KabaVariations-Individual-90deg.otf') format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Kaba-6";
+    src: url('KabaVariations-Individual-90deg-mirror.otf') format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Kaba-7";
+    src: url('KabaVariations-Individual-270deg.otf') format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Kaba-8";
+    src: url('KabaVariations-Individual-mirror-90deg.otf') format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Verdana-icons";
+    src: url('vermetrics-icon.otf') format("opentype");
+    font-feature-settings: "ss01" 0;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.kabaIndividual {
+    font-family: "Kaba";
+    font-size: 40px;
+    line-height: 40px;
+    font-feature-settings: "ss01" 0, "ss02" 0;
+}
+
+.kabaIndividual:hover {
+    font-feature-settings: "ss01" 1, "ss02" 0;
+}
+
+.kabaLine {
+    font-family: "Kaba";
+    font-feature-settings: "ss01" 0, "ss02" 0;
+    cursor: pointer;
+}
+
+.kabaLine2 {
+    font-family: "Kaba-2";
+    font-feature-settings: "ss01" 0, "ss02" 0;
+    cursor: pointer;
+}
+
+.kabaLine3 {
+    font-family: "Kaba-3";
+    font-feature-settings: "ss01" 0, "ss02" 0;
+    cursor: pointer;
+}
+
+.kabaLine4 {
+    font-family: "Kaba-4";
+    font-feature-settings: "ss01" 0, "ss02" 0;
+    cursor: pointer;
+}
+
+.kabaLine5 {
+    font-family: "Kaba-5";
+    font-feature-settings: "ss01" 0, "ss02" 0;
+    cursor: pointer;
+}
+
+.kabaLine6 {
+    font-family: "Kaba-6";
+    font-feature-settings: "ss01" 0, "ss02" 0;
+    cursor: pointer;
+}
+
+.kabaLine7 {
+    font-family: "Kaba-7";
+    font-feature-settings: "ss01" 0, "ss02" 0;
+    cursor: pointer;
+}
+
+.kabaLine8 {
+    font-family: "Kaba-8";
+    font-feature-settings: "ss01" 0, "ss02" 0;
+    cursor: pointer;
+}
+
+.redText {
+    color: #e93414;
+}
+
+
+.kabaDigit {
+    font-family: "Kaba";
+    font-size: 40px;
+    line-height: 40px;
+    font-feature-settings: "ss01" 1, "ss02" 0;
+}
+
+.kabaDigit:hover {
+    font-feature-settings: "ss01" 0, "ss02" 1;
+}
+
+
+
+.flex-container {
+    width: calc(90vw);
+    display: flex; /* or inline-flex */
+    flex-direction: column;
+    padding: 30px 5vw 0 5vw;
+    gap: 22px;
+
+}
+
+.flex-horizontal {
+    max-width: 100%;
+    flex-wrap: wrap;
+    display: flex; /* or inline-flex */
+    flex-direction: row;
+    padding: 0 0 0 0;
+    gap: var(--minTextInterval);
+
+}
+
+.horizontal-interior {
+    padding: 0;
+    margin: 0;
+    width: calc(calc(90vw / 26) * 12);
+    /* background-color: red; */
+}
+
+.kabaFont {
+    font-family: "Kaba";
+    font-size: 80px;
+    line-height: 80px;
+}
+
+
+
+.kabaFont:hover {
+    font-feature-settings: "ss01" 1, "ss02" 0;
+}
+
+.container {
+    padding: 0px 5px 5px 5px;
+    border: #D1CCC5 solid 2px;
+    border-radius:8px;
+}
+
+.descriptionText {
+    margin-bottom: 0;
+    margin-top: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+}
+
+
+
+
+
+.collapseIcons {
+    font-family: "Verdana-icons";
+}
+
+/* .collapseIcons:hover {
+    font-feature-settings: "ss01" 1;
+  } */
+
+details>summary:hover .collapseIcons {
+    font-feature-settings: "ss01" 1;
+}
+
+details {
+    user-select: none;
+  }
+  
+  details>summary span.icon {
+    transition: all 0.4s;
+    
+  }
+  
+  details[open] summary span.icon {
+    opacity: 0%;
+    letter-spacing: 0.1px;
+    translate: 0.2px -0.3px;
+    transition: all 0.3s;
+  }
+  
+  summary {
+    display: block;
+    cursor: pointer;
+  }
+  
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  details {
+    user-select:auto
+  }
+
+  details>summary span.collapseIcons {
+    font-feature-settings: "ss01" 0;
+    
+  }
+  
+  details[open] summary span.collapseIcons {
+    font-feature-settings: "ss01" 1;
+  }
+
+  /* details[open] summary span.collapseIcons:hover {
+    font-feature-settings: "ss01" 0;
+  } */
+
+  details[open]>summary:hover .collapseIcons {
+    font-feature-settings: "ss01" 0;
+}
+
+  .kabaBig {
+    font-size: var(--maxText);
+    line-height: var(--maxText);
+    user-select: none;
+}
+
+.kabaMed {
+    font-size: var(--medText);
+    line-height: var(--medText);
+    user-select: none;
+}
+
+.kabaMin {
+    font-size: var(--minText);
+    line-height: var(--minText);
+    user-select: none;
+}
+
+
+  @media only screen and (max-width: 910px) {
+    #explanation {
+        left: 5vw;
+        bottom: 30px;
+        padding: 15px 5px 20px 5px;
+        max-width: 90vw;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .kabaMin {
+        font-size: var(--minTextAlt);
+        line-height: var(--minTextAlt);
+        user-select: none;
+    }
+
+    .horizontal-interior {
+        padding: 0;
+        margin: 0;
+        width: calc(calc(90vw / 26) * 24);
+  }
+}
+
+  .highlight {
+    /* color: #550f49; */
+    color:#e93414;
+  }
+
+  .obj0:hover, .obj4:hover, .obj5:hover, .obj6:hover, .obj7:hover, .obj8:hover, .obj9:hover, .obj10:hover, .obj11:hover, .obj12:hover, .obj13:hover, .obj14:hover, .obj15:hover, .obj16:hover, .obj17:hover, .obj18:hover, .obj19:hover, .obj20:hover, .obj21:hover, .obj22:hover, .obj23:hover {
+    color:#9a2684;
+    opacity: 100%;
+  }
+
+  .obj1:hover, .obj2:hover, .obj3:hover {
+    color:#a92f92;
+    opacity: 100%;
+  }
