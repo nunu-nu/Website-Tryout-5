@@ -1,6 +1,7 @@
 html, body {
     margin: 0 0 0 0;
     padding: 0 0 0 0;
+    background-color: rgb(240, 237, 237);
 }
 
 :root {
@@ -356,4 +357,8 @@ details {
   .obj1:hover, .obj2:hover, .obj3:hover {
     color:#a92f92;
     opacity: 100%;
+  }
+
+  .textBlock {
+    max-width: 1000px;
   }
