@@ -6,7 +6,7 @@ html, body {
 
 :root {
     --maxText: calc(calc(90vw - 5px)/14);
-    --medText: calc(calc(90vw - 5px)/22);
+    --medText: calc(calc(90vw - 5px)/21);
     --minText: calc(calc(90vw - 5px)/26);
     --minTextAlt: calc(calc(90vw - 5px)/12);
     --minTextInterval: calc(calc(90vw - 10px) / 13);
